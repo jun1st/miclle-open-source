@@ -1,39 +1,37 @@
-module Rails
-  class <<self
-    def root
-      File.expand_path(__FILE__).split('/')[0..-3].join('/')
-    end
-  end
+app_path = File.expand_path(File.join(File.dirname(__FILE__), '..'))
+
+if ENV['RACK_ENV'] == 'production'
+  worker_processes 6
+else
+  worker_processes 2
 end
-rails_env = ENV["RAILS_ENV"] || "production"
 
-preload_app true
-working_directory Rails.root
-pid "#{Rails.root}/tmp/pids/unicorn.pid"
-stderr_path "#{Rails.root}/log/unicorn.log"
-stdout_path "#{Rails.root}/log/unicorn.log"
-
-listen 5000, :tcp_nopush => false
-
-listen "/tmp/unicorn.miclle.sock"
-worker_processes 6
 timeout 120
 
-if GC.respond_to?(:copy_on_write_friendly=)
-  GC.copy_on_write_friendly = true
-end
+preload_app true
+GC.respond_to?(:copy_on_write_friendly=) and GC.copy_on_write_friendly = true
+
+working_directory app_path
+shared_directory = File.expand_path(File.join(app_path, '..', 'shared'))
+
+listen "#{shared_directory}/sockets/unicorn.sock", :backlog => 64
+pid "#{shared_directory}/pids/unicorn.pid"
+
+stderr_path 'log/unicorn.stderr.log'
+stdout_path 'log/unicorn.stdout.log'
 
 before_fork do |server, worker|
-  old_pid = "#{Rails.root}/tmp/pids/unicorn.pid.oldbin"
+  ActiveRecord::Base.connection.disconnect! if defined?(ActiveRecord)
+  old_pid = "#{server.config[:pid]}.oldbin"
   if File.exists?(old_pid) && server.pid != old_pid
     begin
       Process.kill("QUIT", File.read(old_pid).to_i)
     rescue Errno::ENOENT, Errno::ESRCH
-      puts "Send 'QUIT' signal to unicorn error!"
+      # someone else did our job for us
     end
   end
 end
-
+ 
 after_fork do |server, worker|
-
+  ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
 end
