@@ -15,7 +15,7 @@ set :scm, :git
 
 # Default value for :format is :pretty
 set :format, :pretty
-
+set :rbenv_ruby, '2.1.2'
 # Default value for :log_level is :debug
 # set :log_level, :debug
 
@@ -26,7 +26,7 @@ set :format, :pretty
 set :linked_files, %w{config/database.yml config/newrelic.yml config/config.yml}
 
 # Default value for linked_dirs is []
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{bin log pids sockets tmp/cache vendor/bundle}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -53,6 +53,22 @@ namespace :deploy do
       #   execute :rake, 'cache:clear'
       # end
     end
+  end
+
+  desc 'restart unicorn'
+  task :restart do
+    invoke 'unicorn:restart'
+  end
+  task :stop do
+    invoke 'unicorn:stop'
+  end
+
+  task :start do
+    invoke 'unicorn:start'
+  end
+
+  task :generate_sitemap do
+    invoke 'sitemap:generate'
   end
 
 end
