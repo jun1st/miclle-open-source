@@ -21,7 +21,7 @@ if Rails.env.production?
     # Email notifier sends notifications by email.
     config.add_notifier :email, {
       :email_prefix         => "[ERROR] ",
-      :sender_address       => %{"ExceptionNotification" <exception_notification@miclle.com>},
+      :sender_address       => %{"ExceptionNotification" <exception-notification@desksformac.com>},
       :exception_recipients => Settings.exception_recipients,
       :delivery_method      => :smtp,
       :smtp_settings        => {
@@ -29,8 +29,8 @@ if Rails.env.production?
         :domain               => 'exmail.qq.com',
         :port                 => 25,
         :authentication       => :login,
-        :user_name            => 'exception_notification@miclle.com',
-        :password             => 'xxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+        :user_name            => 'exception-notification@desksformac.com',
+        :password             => 'asdf123',
         :enable_starttls_auto => true
       }
     }

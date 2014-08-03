@@ -6,7 +6,7 @@ source 'http://ruby.taobao.org'
 gem 'rails', '4.0.2'
 
 # Use mysql as the database for Active Record
-gem 'mysql2', '~> 0.3.15'
+gem 'pg'
 
 #https://bitbucket.org/ged/ruby-pg/wiki/Home
 # gem 'pg', '~> 0.17.1'

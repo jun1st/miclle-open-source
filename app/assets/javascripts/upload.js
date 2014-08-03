@@ -169,7 +169,7 @@ $(function(){
 
       // 然后构造 input[name="action"] 的值
       // generate_rs_put_path() 在 assets/javascripts/helper.js 中有定义
-      var actionString = generate_rs_put_path('miclle-private', user_uuid + '/' + fileUniqKey, file.type);
+      var actionString = generate_rs_put_path('macdesks', user_uuid + '/' + fileUniqKey, file.type);
 
       // 给表单添加 input[name="action"] 字段
       data.push({name: 'action', value: actionString});

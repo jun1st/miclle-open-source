@@ -16,7 +16,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
   # config.mailer_sender = "no-reply@miclle.com"
-  config.mailer_sender = '"Miclle.com" <no-reply@miclle.com>'
+  config.mailer_sender = '"DesksForMac.com" <no-reply@desksformac.com>'
 
   # Configure the class responsible to send e-mails.
   config.mailer = "Devise::Mailer"
@@ -27,7 +27,7 @@ Devise.setup do |config|
   # available as additional gems.
   require 'devise/orm/active_record'
 
-  config.secret_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+  config.secret_key = 'b2e96e93e485f6be0637bdfca6427a30f5ffb231f8f1df46dc03ad3b52067d0a203fec21d29bd14f3db7781a5b047b2ccf867c27192ea9b2e95f4885ff924731'
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
@@ -107,7 +107,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  config.pepper = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  # config.pepper = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without

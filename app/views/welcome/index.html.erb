@@ -1,5 +1,5 @@
 <% content_for :head do %>
-<style type="text/css">.photograph{background-image:url(<%= @photo.xxlarge -%>)}</style>
+<style type="text/css">.photograph{background-image:url(<%= @photo.try(:xxlarge) -%>)}</style>
 <% end -%>
 
 <div class="photograph">
@@ -30,8 +30,6 @@
   </div>
   <div class="photo-details">
     <h3>
-      <%= link_to @photo.name, @photo %> <br>
-      <small><%= link_to "©#{@photo.user.nickname}", homepage_user_path(@photo.user.username) -%></small>
     </h3>
   </div>
 </div>

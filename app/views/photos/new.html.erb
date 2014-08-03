@@ -4,7 +4,9 @@
 <div class="container clearfix">
 
   <form accept-charset="UTF-8" action="http://up.qbox.me/upload" class="text align center clearfix" enctype="multipart/form-data" id="fileupload" method="post">
+    <input type="hidden" name="key" value="<%= key -%>" />
     <input type="hidden" name="auth" value="<%= @upload_token -%>" />
+    <input type="hidden" name="bucket" value="macdesks" />
 
     <div class="fileupload-buttonbar" id="drag-or-browse">
       <h2>把相片拖放到这里即可上传</h2>

@@ -5,7 +5,7 @@ defaults: &defaults
     host: 127.0.0.1
     port: 6379
 
-  app_name: "Miclle 美摄图志"
+  app_name: "Mac工作台"
   username_exclusion:
     - editor
     - editors
@@ -24,15 +24,15 @@ defaults: &defaults
     - '422'
     - '500'
 
-  qiniu_access_key: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-  qiniu_secret_key: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+  qiniu_access_key: 's1uJ3BWruFnHmlEEZK-vI8Kx2Fs_-akrbP8kPpd-'
+  qiniu_secret_key: 'BAEX6qkmvBlvxKxENOPROXNHrzJgFRcObXwOhoyM'
 
-  photo_bucket: 'miclle'
-  cdn_domain:   'http://cdn.miclle.com'
+  photo_bucket: 'macdesks'
+  cdn_domain:   'http://macdesks.qiniudn.com'
   # cdn_domain:   'miclle.u.qiniudn.com'
 
-  private_bucket: 'miclle-private'
-  private_cdn_domain:   'http://ppcdn.miclle.com'
+  private_bucket: 'private-macdesks'
+  private_cdn_domain:   'http://private-macdesks.qiniudn.com'
   # private_cdn_domain:   'http://miclle-private.qiniudn.com'
 
   static_bucket: 'miclle-static'
@@ -50,7 +50,7 @@ defaults: &defaults
       xxlarge: 'xxlarge'  # width: 1920px
 
   exception_recipients:
-    - miclle.zheng@gmail.com
+    - jun1st.feng@gmail.com
 
 development:
   <<: *defaults

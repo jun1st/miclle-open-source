@@ -56,7 +56,7 @@ Miclle::Application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = Settings.static_cdn_domain
+  # config.action_controller.asset_host = Settings.static_cdn_domain
 
   # http://guides.rubyonrails.org/configuring.html#config.assets.prefix
   # config.assets.prefix defines the prefix where assets are served from. Defaults to /assets.
@@ -74,7 +74,7 @@ Miclle::Application.configure do
   # Disable delivery errors, bad email addresses will be ignored
   config.action_mailer.raise_delivery_errors = false
 
-  config.action_mailer.default_url_options = { :host => 'http://miclle.com' }
+  config.action_mailer.default_url_options = { :host => 'http://www.desksformac.com' }
 
   # set delivery method to :smtp, :sendmail or :test
   config.action_mailer.delivery_method = :smtp
@@ -85,8 +85,8 @@ Miclle::Application.configure do
     :domain               => 'exmail.qq.com',
     :port                 => 25,
     :authentication       => :login,
-    :user_name            => 'no-reply@miclle.com',
-    :password             => 'xxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    :user_name            => 'no-reply@desksformac.com',
+    :password             => 'asdf123',
     :enable_starttls_auto => true
   }
 

@@ -32,9 +32,9 @@ class PhotosController < ApplicationController
 
   # GET /photos/new
   def new
-    @upload_token = Qiniu::RS.generate_upload_token :scope              => Settings.private_bucket,
+    @upload_token = Qiniu::RS.generate_upload_token :scope              => Settings.photo_bucket,
                                                     # :expires_in         => expires_in_seconds,
-                                                    :callback_url       => 'http://miclle.com/photo/qiniu/callback',
+                                                    :callback_url       => 'http://www.desksformac.com/photo/qiniu/callback',
                                                     # :callback_body      => "user=#{current_user.uuid}",
                                                     # :callback_body_type => 'application/x-www-form-urlencoded',
                                                     :customer           => current_user.uuid.to_s

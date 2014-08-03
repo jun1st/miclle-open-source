@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Miclle::Application.config.secret_key_base = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+Miclle::Application.config.secret_key_base = '0eb4a140ad16edf6798333073e57cdd34582ae51907d30f1f2c93b55f7ad043bd5524cd67609936c7c124049eb7c1159e6c0c754e9e5774c08d4ca2949c73ffb'

@@ -27,8 +27,8 @@ Miclle::Application.configure do
     :domain               => 'exmail.qq.com',
     :port                 => 25,
     :authentication       => :login,
-    :user_name            => 'no-reply@miclle.com',
-    :password             => 'xxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    :user_name            => 'no-reply@desksformac.com',
+    :password             => 'asdf123',
     :enable_starttls_auto => true
   }
 
