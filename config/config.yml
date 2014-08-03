@@ -35,8 +35,8 @@ defaults: &defaults
   private_cdn_domain:   'http://private-macdesks.qiniudn.com'
   # private_cdn_domain:   'http://miclle-private.qiniudn.com'
 
-  static_bucket: 'miclle-static'
-  static_cdn_domain: 'http://static.miclle.com'
+  # static_bucket: 'miclle-static'
+  # static_cdn_domain: 'http://static.miclle.com'
   # static_cdn_domain: 'http://miclle-static.qiniudn.com'
 
   photo:
