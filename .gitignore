@@ -20,6 +20,8 @@ tmp
 .DS_Store?
 .rvmrc
 config/database.yml
+config/newrelic.yml
+config/config.yml
 .ruby-*
 /public/photo
 /public/avatars
