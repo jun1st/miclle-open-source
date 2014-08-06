@@ -1,7 +1,7 @@
 app_path = File.expand_path(File.join(File.dirname(__FILE__), '..'))
 
 if ENV['RACK_ENV'] == 'production'
-  worker_processes 6
+  worker_processes 4
 else
   worker_processes 2
 end
