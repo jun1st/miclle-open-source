@@ -26,3 +26,4 @@ config/config.yml
 /public/photo
 /public/avatars
 /public/assets
+config/environments/production.rb
