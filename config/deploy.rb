@@ -26,7 +26,7 @@ set :rbenv_ruby, '2.1.2'
 set :linked_files, %w{config/database.yml config/newrelic.yml config/config.yml}
 
 # Default value for linked_dirs is []
-set :linked_dirs, %w{bin log pids sockets tmp/cache vendor/bundle public/assets}
+set :linked_dirs, %w{bin log pids sockets tmp/cache vendor/bundle}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
