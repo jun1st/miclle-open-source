@@ -11,29 +11,11 @@ class Photo < ActiveRecord::Base
 
   CATEGORY = {
     uncategorized:      '未分类',
-    city_architecture:  '城市建筑',
-    still_life:         '静物写生',
-    people:             '人物',
-    landscapes:         '风景',
-    commercial:         '广告',
-    concert:            '音乐会',
-    family:             '家庭',
-    fashion:            '时尚',
-    film:               '电影',
-    fineart:            '美术',
-    food:               '美食',
-    news:               '新闻',
-    nude:               '裸体',
-    performing_arts:    '表演艺术',
-    sport:              '运动',
-    street:             '街头',
-    transportation:     '运输',
-    travel:             '旅行',
-    underwater:         '水下',
-    urban_exploration:  '城市探险',
-    wedding:            '婚礼',
-    abstract:           '抽象',
-    animals:            '动物'
+    workspace:  '工作台',
+    wallpaper:         '壁纸',
+    macbook_pro:             'macbook pro',
+    iPad:         'ipad',
+    iPhone:         'iPhone'
   }
   CATEGORY_INVERT = CATEGORY.invert
 
