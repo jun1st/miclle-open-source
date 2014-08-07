@@ -1,8 +1,8 @@
 from fabric.api import run, env, cd
 
-env.hosts = ['miclle.com']
+env.hosts = ['desksformac.com']
 env.user = 'username'
-CODE_DIR = '/var/www/miclle'
+# CODE_DIR = '/var/www/miclle'
 
 
 def deploy():
