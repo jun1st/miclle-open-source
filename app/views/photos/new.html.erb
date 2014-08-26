@@ -2,7 +2,7 @@
 <% key = SecureRandom.uuid_short %>
 
 <div class="container clearfix">
-
+  <h2 class="text align center">为了避免恶意用户上传无厘头图片，新上传的图片在审核之后开发给所有人</h2>
   <form accept-charset="UTF-8" action="http://up.qbox.me/upload" class="text align center clearfix" enctype="multipart/form-data" id="fileupload" method="post">
     <input type="hidden" name="key" value="<%= key -%>" />
     <input type="hidden" name="auth" value="<%= @upload_token -%>" />
