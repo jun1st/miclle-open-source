@@ -1,5 +1,5 @@
 # config valid only for Capistrano 3.1
-lock '3.1.0'
+lock '3.2.1'
 
 set :application, 'macdesks'
 set :repo_url, 'git@github.com:jun1st/miclle-open-source.git'
